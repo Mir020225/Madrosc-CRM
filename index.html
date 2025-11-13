@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IntelliCRM - AI-Powered Customer Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Enable dark mode support
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+      
+      :root {
+        --font-sans: 'Inter', sans-serif;
+        
+        /* Light Theme Colors */
+        --bg-light: #f8f9fa;
+        --card-bg-light: #ffffff;
+        --text-primary-light: #212529;
+        --text-secondary-light: #6c757d;
+        --border-light: #dee2e6;
+        --primary-light: #0d6efd;
+        --primary-hover-light: #0b5ed7;
+
+        /* Dark Theme Colors */
+        --bg-dark: #0d1117;
+        --card-bg-dark: #161b22;
+        --text-primary-dark: #c9d1d9;
+        --text-secondary-dark: #8b949e;
+        --border-dark: #30363d;
+        --primary-dark: #2f81f7;
+        --primary-hover-dark: #58a6ff;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        background-attachment: fixed;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      /* Elegant Gradient Mesh Background */
+      body.light {
+        background-color: var(--bg-light);
+        background-image:
+          radial-gradient(at 20% 20%, hsla(210,80%,95%,1) 0px, transparent 50%),
+          radial-gradient(at 80% 0%, hsla(28,80%,90%,1) 0px, transparent 50%),
+          radial-gradient(at 80% 80%, hsla(190,80%,90%,1) 0px, transparent 50%);
+        color: var(--text-primary-light);
+      }
+      body.dark {
+        background-color: var(--bg-dark);
+        background-image:
+          radial-gradient(at 20% 20%, hsla(210,40%,15%,0.5) 0px, transparent 50%),
+          radial-gradient(at 80% 0%, hsla(28,40%,15%,0.5) 0px, transparent 50%),
+          radial-gradient(at 80% 80%, hsla(190,40%,15%,0.5) 0px, transparent 50%);
+        color: var(--text-primary-dark);
+      }
+      
+      /* Base Card Style */
+      .card-base {
+        background-color: var(--card-bg-light);
+        border: 1px solid var(--border-light);
+        border-radius: 0.75rem; /* 12px */
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+        transition: all 0.2s ease-in-out;
+      }
+      .dark .card-base {
+        background-color: var(--card-bg-dark);
+        border-color: var(--border-dark);
+        box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Modal Styling */
+      .modal-content {
+        animation: slide-in-down 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      @keyframes slide-in-down {
+        from { transform: translateY(-20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #ced4da; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #adb5bd; }
+      .dark ::-webkit-scrollbar-thumb { background: #495057; }
+      .dark ::-webkit-scrollbar-thumb:hover { background: #6c757d; }
+
+      /* Animation Definitions */
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+      
+      @keyframes slide-in-right {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      .animate-slide-in-right { animation: slide-in-right 0.3s ease-out forwards; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "lodash.debounce": "https://aistudiocdn.com/lodash.debounce@^4.0.8",
+    "vite": "https://aistudiocdn.com/vite@^7.2.2",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
