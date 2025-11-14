@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { AppProvider } from './contexts/AppContext';
-import { ThemeProvider } from './contexts/ThemeContext';
-import { ToastProvider } from './contexts/ToastContext';
+ import { ThemeProvider } from './src/contexts/ThemeContext'
+   import { ToastProvider } from './src/contexts/ToastContext'
+   import { AppProvider } from './src/contexts/AppContext'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
