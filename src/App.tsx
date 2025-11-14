@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import { useApp } from './src/contexts/AppContext';
-import Header from './src/components/layout/Header';
-import Dashboard from './src/components/Dashboard';
-import AnalyticsPage from './src/components/analytics/AnalyticsPage';
-import CustomerDetailModal from './src/components/CustomerDetailModal';
-import AddCustomerModal from './src/components/AddCustomerModal';
-import BulkImportModal from './src/components/BulkImportModal';
-import AddTaskModal from './src/components/AddTaskModal';
-import CommandPalette from './src/components/command/CommandPalette';
-import Filters from './src/components/layout/Filters';
+import { useApp } from './contexts/AppContext';
+import Header from './components/layout/Header';
+import Dashboard from './components/Dashboard';
+import AnalyticsPage from './components/analytics/AnalyticsPage';
+import CustomerDetailModal from './components/CustomerDetailModal';
+import AddCustomerModal from './components/AddCustomerModal';
+import BulkImportModal from './components/BulkImportModal';
+import AddTaskModal from './components/AddTaskModal';
+import CommandPalette from './components/command/CommandPalette';
+import Filters from './components/layout/Filters';
 
 const App: React.FC = () => {
     const { 
